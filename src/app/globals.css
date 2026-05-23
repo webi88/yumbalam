@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-lora: 'Lora', Georgia, serif;
+    --font-nunito: 'Nunito', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-arena-50 text-tierra-900 font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-selva-200 text-selva-900;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .container-max {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  .section-cream {
+    @apply bg-arena-50;
+  }
+  .section-white {
+    @apply bg-white;
+  }
+  .section-selva {
+    @apply bg-selva-900 text-white;
+  }
+  .tag-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-selva-600 hover:bg-selva-500 text-white font-bold rounded-lg transition-all shadow-md hover:-translate-y-0.5;
+  }
+  .btn-tierra {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-tierra-600 hover:bg-tierra-500 text-white font-bold rounded-lg transition-all shadow-md hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-selva-600 text-selva-700 hover:bg-selva-50 font-bold rounded-lg transition-all;
+  }
+  .card-cream {
+    @apply bg-white rounded-xl border border-arena-200 shadow-sm;
+  }
+}
