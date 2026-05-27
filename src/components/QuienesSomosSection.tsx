@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AnimateOnScroll from "./AnimateOnScroll";
 import { Users, Sprout, Fish } from "lucide-react";
+import { IMAGES } from "@/lib/images";
 
 const VOCES = [
   {
@@ -35,7 +36,7 @@ export default function QuienesSomosSection() {
           <AnimateOnScroll direction="right">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80"
+                src={IMAGES[1]}
                 alt="Comunidad y territorio Yum Balam"
                 className="w-full h-80 lg:h-[480px] object-cover"
               />

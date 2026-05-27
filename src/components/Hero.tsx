@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { IMAGES } from "@/lib/images";
 
 export default function Hero() {
   return (
@@ -7,8 +8,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=1600&q=85"
-          alt="Selva y manglar de Yum Balam"
+          src={IMAGES[0]}
+          alt="Territorio Yum Balam"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-selva-950/80 via-selva-950/60 to-selva-950/85" />

@@ -1,5 +1,6 @@
 import AnimateOnScroll from "./AnimateOnScroll";
-import { Facebook, Instagram, Youtube, Play } from "lucide-react";
+import { Facebook, Instagram, Youtube, Quote } from "lucide-react";
+import { IMAGES } from "@/lib/images";
 
 const REDES = [
   { icon: Facebook,  label: "Facebook",  handle: "@FrenteYumBalam",  href: "https://facebook.com", color: "bg-blue-600 hover:bg-blue-500" },
@@ -26,29 +27,21 @@ export default function MultimediaSection() {
         </AnimateOnScroll>
 
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Video embed placeholder */}
+          {/* Testimonio del territorio */}
           <AnimateOnScroll direction="right" delay={0.1}>
-            <div className="relative rounded-2xl overflow-hidden bg-selva-800 aspect-video group cursor-pointer">
+            <div className="relative rounded-2xl overflow-hidden bg-selva-800 aspect-video">
               <img
-                src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80"
-                alt="Video del Frente"
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-50 transition-opacity"
+                src={IMAGES[2]}
+                alt="Territorio del norte de Quintana Roo"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center group-hover:bg-white/30 transition-all">
-                  <Play className="w-7 h-7 text-white ml-1" />
-                </div>
-                <div className="text-center px-6">
-                  <p className="text-white font-heading font-bold text-lg leading-snug">
-                    Asamblea Ejidal — Mayo 2026
-                  </p>
-                  <p className="text-white/60 text-sm mt-1">
-                    "El desarrollo que queremos: nuestras condiciones"
-                  </p>
-                </div>
-              </div>
-              <div className="absolute bottom-4 right-4 bg-selva-900/80 rounded-lg px-3 py-1.5 text-xs text-white/70">
-                Próximamente en YouTube
+              <div className="absolute inset-0 bg-gradient-to-t from-selva-950 via-selva-950/50 to-transparent" />
+              <div className="absolute inset-0 flex flex-col justify-end p-7">
+                <Quote className="w-7 h-7 text-tierra-300/70 mb-2" />
+                <p className="text-white font-heading font-bold text-lg lg:text-xl leading-snug max-w-md">
+                  "La selva no es un obstáculo para el desarrollo. Es la razón por la que el desarrollo vale la pena."
+                </p>
+                <p className="text-tierra-300 text-sm mt-3">— Voz del territorio, Yum Balam</p>
               </div>
             </div>
           </AnimateOnScroll>

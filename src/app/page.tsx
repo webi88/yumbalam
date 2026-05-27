@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import VideoCarousel from "@/components/VideoCarousel";
+import ArticulosCarousel from "@/components/ArticulosCarousel";
+import QueDefendemosSection from "@/components/QueDefendemosSection";
 import QuienesSomosSection from "@/components/QuienesSomosSection";
-import BlogPreview from "@/components/BlogPreview";
+import NarrativaTabs from "@/components/NarrativaTabs";
 import MultimediaSection from "@/components/MultimediaSection";
 import Footer from "@/components/Footer";
 
@@ -11,9 +12,10 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <VideoCarousel />
+      <ArticulosCarousel />
+      <QueDefendemosSection />
       <QuienesSomosSection />
-      <BlogPreview />
+      <NarrativaTabs />
       <MultimediaSection />
       <Footer />
     </main>
