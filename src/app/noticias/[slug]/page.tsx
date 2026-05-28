@@ -1,22 +1,25 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { posts, getPostBySlug } from "@/lib/posts";
+import { fetchPosts, fetchPost } from "@/lib/supabase";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
+  const posts = await fetchPosts();
   return posts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+  const post = await fetchPost(params.slug);
   if (!post) return {};
   return { title: `${post.title} — Frente Pro Yum Balam`, description: post.excerpt };
 }
 
-export default function NoticiaPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function NoticiaPage({ params }: { params: { slug: string } }) {
+  const post = await fetchPost(params.slug);
   if (!post) notFound();
 
   return (
