@@ -27,7 +27,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl">
-          La tierra, el monte y el mar{" "}
+          La tierra y el mar{" "}
           <span className="text-selva-300">son nuestros.</span>
           <br />
           El futuro también.
